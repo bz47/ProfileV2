@@ -711,6 +711,11 @@ label {
     margin-top: 0;
   }
 
+  .column:nth-child(2),
+  .column:nth-child(3) {
+    border: none;
+  }
+
   .column h2 {
     padding-left: 1em;
     margin-bottom: -2%;
@@ -720,6 +725,11 @@ label {
 
   #dev-grid {
     min-height: auto;
+    gap: 1;
+  }
+
+  #skills {
+    padding: 0;
   }
 }
 
@@ -727,8 +737,12 @@ label {
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
+  #skills .holder {
+    margin-top: -12%;
+  }
+
   .background2 img {
-    min-height: 318vh;
+    min-height: 370vh;
   }
 
   .foreground-content2 {
@@ -789,6 +803,11 @@ label {
     margin-top: 0;
   }
 
+  .column:nth-child(2),
+  .column:nth-child(3) {
+    border: none;
+  }
+
   .column h2 {
     padding-left: 1em;
     margin-bottom: -2%;
@@ -798,6 +817,7 @@ label {
 
   #dev-grid {
     min-height: auto;
+    gap: 1;
   }
 }
 
@@ -861,6 +881,10 @@ label {
     width: 100%;
     margin-top: 3em;
   }
+
+  .column {
+    justify-content: flex-start;
+  }
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
@@ -889,6 +913,10 @@ label {
 
   #do:after {
     width: 20vw;
+  }
+
+  .column {
+    justify-content: flex-start;
   }
 }
 
