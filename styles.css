@@ -649,7 +649,7 @@ label {
   }
 
   .background2 img {
-    min-height: 370vh;
+    min-height: 450vh;
   }
 
   .foreground-content2 {
@@ -698,7 +698,8 @@ label {
     height: 4px;
     background-color: rgb(24, 24, 24);
     width: 100%;
-    margin-block: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 1.5em;
   }
 
   .flex-holder {
