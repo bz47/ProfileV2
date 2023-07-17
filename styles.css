@@ -698,7 +698,7 @@ label {
     height: 4px;
     background-color: rgb(24, 24, 24);
     width: 100%;
-    margin-top: 1em;
+    margin-block: 1.2em;
   }
 
   .flex-holder {
