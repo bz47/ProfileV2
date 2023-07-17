@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>What&#39;s in the Night Sky?</title>
+    
+    
+    
+    
+    
+    <script type="text/javascript">
+    var cmNrRandValue = Math.floor(Math.random() * 100) + 1;
+    if (cmNrRandValue > 90) {
+        window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);
+        ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"fc8f365170",applicationID:"127809246",sa:1}
+    }
+</script>
+
+    
+    
+  
+  
+  
+  
+  
+    
+    
+    
+  
+
+  <script type="text/javascript">
+    const safeWords = [
+      'Edit Icon',
+      'SAVE',
+      'Save',
+      'Copy',
+      'Edit',
+      'EDIT',
+      'COPY',
+      'Close',
+      'CLOSE',
+      'Remove',
+      'Restore',
+      'RESTORE',
+      'REMOVE',
+      'MANAGE',
+      'CANCEL',
+      'HOME',
+      'Toggle Dropdown',
+      'Archive class',
+      'ARCHIVE',
+      'Enter first name',
+      'Enter last name',
+      'Enter ID',
+      'Open Menu',
+      'Trash Icon',
+      'Toggle Menu',
+      'Co-teacher (optional) Search email',
+      'Click or hit enter to hide this message',
+      'Add new Program',
+    ];
+
+    (function (h, o, u, n, d) {
+      h = h[d] = h[d] || { q: [], onReady: function (c) { h.q.push(c) } }
+      d = o.createElement(u); d.async = 1; d.src = n
+      n = o.getElementsByTagName(u)[0]; n.parentNode.insertBefore(d, n)
+    })(window, document, 'script', 'https://www.datadoghq-browser-agent.com/datadog-rum-v4.js', 'DD_RUM')
+    DD_RUM.onReady(function () {
+      DD_RUM.init({
+        clientToken: 'pub084c609703435ca5d5b3b5b191213497',
+        applicationId: 'ff9a6ffe-8a96-42ad-a63a-c683a604d098',
+        site: 'datadoghq.com',
+        service: 'classmags-prod',
+        env: 'prod',
+        // Specify a version number to identify the deployed version of your application in Datadog 
+        // version: '1.0.0',
+        sessionSampleRate: 100,
+        sessionReplaySampleRate: 0,
+        trackUserInteractions: true,
+        trackResources: false,
+        trackLongTasks: false,
+        defaultPrivacyLevel: 'mask',
+
+        // Redact any PII (Personally Identifiable Information) or sensitive data that we are sending
+        beforeSend: (event) => {
+          try {
+            if (event.type === 'action' && event.action.type === 'click' && !safeWords.includes(event.action.target.name)) {
+              event.action.target.name = 'REDACTED';
+            }
+          } catch (e) {
+            console.error('Something went wrong in DD', e);
+          }
+        }
+      });
+    })
+  </script>
+
+    <meta charset="utf-8"/>
+<meta http-equiv="x-ua-compatible" content="ie=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    
+	
+    
+<link rel="stylesheet" href="/etc/designs/scholastic/classroom-magazines-migration/videolibrary/clientlibs/common/css.min.dd055803b4b604a2c246459ccb399fc1.css" type="text/css">
+
+    
+
+
+<!-- Google Tag Manager -->
+<script>
+    const isProd = "true";
+    if (isProd === 'true') {
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' +
+                l :
+                '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MKDL3Z');
+    } 
+</script>
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript" name="dtm_page_load">
+	var dumbleData = {"domain":{"server":"watchandlearn.scholastic.com","name":"cm:watchandlearn","channel":"cm:watchandlearn","experienceType":"Content","experience":"Content","audience":"Teachers"},"page":{"access":"everyone","name":"earth-science-and-space/whats-in-the-night-sky","type":"issue","template":"issue"},"issue":"whats-in-the-night-sky","about":{"implementation":"classroommagazines","version":"1.0"}};
+</script>
+
+<script>
+     function getCookie(cname) {
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for (var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	var sdmCookie = getCookie("sdm_nav_ctx");
+	var sdmSiteAuthCookie = null;
+	if (getCookie("lah_sdm_site_auth") !== "") {
+		sdmSiteAuthCookie = getCookie("lah_sdm_site_auth");
+	} else if (getCookie("wal_sdm_site_auth") !== "") {
+		sdmSiteAuthCookie = getCookie("wal_sdm_site_auth");
+	} 
+    if (sdmCookie) {
+        sdmCookie = JSON.parse(sdmCookie);
+		dumbleData.user = {"loginStatus":true,"id":sdmCookie.user_id,"orgId":sdmCookie.orgId,"subscription":sdmCookie.appCodes};
+        if (sdmCookie.role) {
+            var userRole = sdmCookie.role.toLowerCase();
+            if (userRole == "educator") {
+                dumbleData.user.type="teacher";
+            } else if (userRole == "classroom") {
+                dumbleData.user.type = "classroom";
+            } else if (userRole == "guest") {
+                dumbleData.user.type = "guest";
+            } else {
+                dumbleData.user.type = "anonymous";
+            }
+        }
+		if (sdmCookie.iamUserId) {
+			dumbleData.user.spsid = sdmCookie.iamUserId;
+		}
+		if (sdmCookie.orgId) {
+		    dumbleData.user.orgId = sdmCookie.orgId;
+        }
+        if (sdmCookie.appCodes.indexOf(sdmCookie.appCode) > -1) {
+            dumbleData.user.subscriptionStatus = true;
+        } else {
+            dumbleData.user.subscriptionStatus = false;
+        }
+    }
+    else if (sdmSiteAuthCookie !== null){
+		sdmSiteAuthCookie = JSON.parse(sdmSiteAuthCookie);
+        dumbleData.user = {"loginStatus":true,"id":"guest","type":"guest","orgId":sdmSiteAuthCookie.orgId,"subscriptionStatus":true,"subscription":"[]"};
+    }
+    else {
+        dumbleData.user={"loginStatus":false,"id":"anonymous","type":"anonymous","orgId":"","subscriptionStatus":false,"subscription":"[]"};
+    }
+
+    function updateDumbleDataCart() {
+        if (dumbleData.cart === undefined) {
+            dumbleData.cart = {};
+        }
+        if (localStorage.getItem("shoppingCart") !== null) {
+            let shoppingCart = JSON.parse(atob(localStorage.getItem("shoppingCart")));
+            dumbleData.cart.item = [];
+            if (shoppingCart.magazinesList.length > 0) {
+                for (let i = 0; i < shoppingCart.magazinesList.length; i++) {
+                    dumbleData.cart.item[i] = {};
+                    dumbleData.cart.item[i].applicationCode = shoppingCart.magazinesList[i].id;
+                }
+            }
+        }
+        if (dumbleData.cart.id === undefined) {
+            let cartIdCookieValue = getCookie("cm_cart_id");
+            if (cartIdCookieValue !== undefined) {
+                dumbleData.cart.id = cartIdCookieValue;
+            }
+        }
+    }
+    updateDumbleDataCart();
+</script>
+
+<!-- Mock js to overcome issues which occur when we enable tracking protection. -->
+<script type="text/javascript" src="/etc/designs/scholastic/classroom-magazines-migration/clientlibs/classmags-migration-core/scripts/common/satelliteTrackMock.js"></script>
+
+<script>
+	(function()
+	{ var channel = "classroommagazines"; document.write("<scr" + "ipt id='schheadtag' src='//ltm.scholastic.com/ltm/headtag/" + document.location.hostname + "/" + channel + "'></scr" + "ipt>"); }
+	());
+</script>
+    
+
+
+
+
+
+    
+
+    
+        <meta name="description" content="What can you observe when you look up at the night sky?
+
+"/>
+        <link rel="canonical" href="https://watchandlearn.scholastic.com/videos/earth-and-space/earth-science-and-space/whats-in-the-night-sky.html"/>
+        <link rel="shortcut icon" href="/etc/designs/scholastic/classroom-magazines-migration/images/Favicon.ico" type="image/x-icon"/>
+    
+    
+    
+    
+    
+    
+    <meta property="og:title" content="What&#39;s in the Night Sky?"/>
+    <meta property="og:description" content="What can you observe when you look up at the night sky?
+
+"/>
+    <meta property="og:url" content="https://watchandlearn.scholastic.com/videos/earth-and-space/earth-science-and-space/whats-in-the-night-sky.html"/>
+    
+    
+        <meta property="og:image" content="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/Whats-in-the-Night-Sky.jpg"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="What&#39;s in the Night Sky?"/>
+    <meta name="twitter:description" content="What can you observe when you look up at the night sky?
+
+"/>
+    
+    
+        <meta name="twitter:image" content="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/Whats-in-the-Night-Sky.jpg"/>
+    
+    
+    <meta property="pin:description" content="What can you observe when you look up at the night sky?
+
+"/>
+    
+    
+        <meta property="pin:image" content="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/Whats-in-the-Night-Sky.jpg"/>
+    
+    
+    <link rel="stylesheet" href="https://use.typekit.net/bll2mfi.css"/>
+    <link rel="apple-touch-icon" href="/etc/designs/scholastic/classroom-magazines-migration/images/touch-icons/watchandlearn/icon-512.png" sizes="512x512"/>
+    <link rel="apple-touch-icon" href="/etc/designs/scholastic/classroom-magazines-migration/images/touch-icons/watchandlearn/icon-192.png" sizes="192x192"/>
+    <link rel="apple-touch-icon" href="/etc/designs/scholastic/classroom-magazines-migration/images/touch-icons/watchandlearn/icon-180.png" sizes="180x180"/>
+    <link rel="apple-touch-icon" href="/etc/designs/scholastic/classroom-magazines-migration/images/touch-icons/watchandlearn/icon-152.png" sizes="152x152"/>
+    <link rel="apple-touch-icon" href="/etc/designs/scholastic/classroom-magazines-migration/images/touch-icons/watchandlearn/icon-120.png" sizes="120x120"/>
+    <link rel="apple-touch-icon" href="/etc/designs/scholastic/classroom-magazines-migration/images/touch-icons/watchandlearn/icon-80.png" sizes="80x80"/>
+    <link rel="apple-touch-icon" href="/etc/designs/scholastic/classroom-magazines-migration/images/touch-icons/watchandlearn/icon-57.png"/>
+    
+    
+    <meta name="apple-mobile-web-app-title" content="Watch &amp; Learn"/>
+    <meta name="application-name" content="Watch &amp; Learn"/>
+</head>
+    <body>
+    
+    <!-- This change is required to support inline formulae,
+    not implementhing this now to void $2 USD currency formating issues -->
+    <!--
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    -->
+    <div id="liveAnnouncer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+    <div id="cmModals"></div>
+    
+        <div ng-cloak data-sdm-app-code="watchandlearn" data-app-name="watchandlearn" class="  page-whats-in-the-night-sky " id="core-main-container" data-core="true" data-env="prod" data-js-author-mode="false" data-view-as-published="false" data-bookmarkdb="sql" data-votedb="sql" data-marketingdb="sql" data-authorize="everyone" data-stats-endpoint="https://analytics.scholastic.com/prod/stats" data-author-mode="false" data-cloudfront-hostname="https://classmags-cf-prod.scholastic.com" data-cloudfront-keypairid="APKAIPCKVHDTNDEY6YRA" data-is-marketing-redesign-enabled="true" data-is-limelight-enabled="true" data-is-page-ungated="false">
+            <div ng-controller="scienceWorldController">
+                
+                    
+                    <div class="scholastic-background" sw-authorize="everyone" sw-page="true">
+                        <div>
+                            <div>
+                                <section aria-label="Skip to main content">
+                                    <button tabindex="1" class="skip-to-main-content" onclick="skipToMainContent()">Skip to main content</button>
+                                </section>
+                                
+                                <nav class="scholastic-container-wrapper">
+                                    
+
+
+
+
+    
+        
+        
+        <div class="newpar new section">
+
+</div>
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+        
+        
+        <div class="reference parbase"><div class="cq-dd-paragraph"><div class="global-navigation-container global-nav-container parbase">
+    
+
+    
+    <div class="app-nav-bar-main-container container-fluid pad0" ng-if="isLoggedInUser" ng-controller="globalNavigationController" ng-init="searchPagePath='/content/classroom_magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/whats-in-the-night-sky';recordsPerPage=12;">
+        <div class="global-nav-container" ng-class="{'guest-loggedin':isGuest}">
+            <div class="navbar navbar-default app-navbar-header">
+                <div class="row app-nav-primary mar0">
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="row navbar-header app-nav-header">
+                            <div class="menu-icon-block pull-left" ng-show="!isLockedMode">
+                                <button class="navbar-toggle collapsed pull-left nav-header-item nav-menu-icon" type="button" data-toggle="collapse" data-target=".navbar-collapse" tabindex="1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="sw-icon hamburger-menu"></span>
+                                </button>
+                            </div>
+                            <div class="nav-menu-divider"></div>
+                            <div class="col-xs-6 col-sm-4 navbar-toggle pull-left nav-header-item search-logo-block">
+                                
+                                    
+                                    <a ng-href="{{isLockedMode ? 'javascript:void(0)': 'https://watchandlearn.scholastic.com/home-page-logged-in.html'}}" class="has-authorable-logo" aria-label="Link to Watch &amp; Learn homepage">
+                                        <img src="/content/dam/classroom-magazines/watchandlearn/misc/logo-watchandlearn.png" alt="Global nav header logo"/>
+                                    </a>
+                                
+                            </div>
+                            <div class="col-sm-4 nav-header-item navbar-toggle nav-search-box" ng-show="!isLockedMode" data-target=".navbar-collapse">
+                                <form role="search" class="navbar-form nav-search-form" action="#" onsubmit="return false;" autocomplete="off">
+                                    <label for="global-navigation-container-search-input-mobile" class="sr-only">Search this site</label>
+                                    <input type="search" role="combobox" id="global-navigation-container-search-input-mobile" class="form-control" ng-model="searchText" placeholder="Enter Keyword" uib-typeahead="suggestion for suggestion in getSuggestions($viewValue) | limitTo: 5" typeahead-min-length="4" typeahead-focus-first="false" typeahead-on-select="search('https://watchandlearn.scholastic.com/pages/search-results.html')"/>
+                                    <button type="submit" class="input-group-addon" ng-click="search('https://watchandlearn.scholastic.com/pages/search-results.html')">Search</button>
+                                </form>
+                            </div>
+                            <div class="navbar-toggle nav-search-icon pull-right nav-header-item search-icon-block" data-toggle="collapse" data-target=".navbar-collapse" ng-show="!isLockedMode">
+                                <div class="mobile-search-box" ng-show="showMobileSearch">
+                                    <div class="search-content pull-left">
+                                        <form role="search" class="navbar-form nav-search-form" action="#" onsubmit="return false;" autocomplete="off">
+                                            <label for="global-navigation-container-search-input-icon" class="sr-only">Search this site</label>
+                                            <input type="search" role="combobox" id="global-navigation-container-search-input-icon" class="form-control" ng-model="searchText" placeholder="Enter Keyword" uib-typeahead="suggestion for suggestion in getSuggestions($viewValue) | limitTo: 5" typeahead-min-length="4" typeahead-focus-first="false" typeahead-on-select="search('https://watchandlearn.scholastic.com/pages/search-results.html')"/>
+                                            <input type="hidden" class="current-page" name="currentPagePath" data-current-page-path='/content/classroom_magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/whats-in-the-night-sky'/>
+                                            <button class="input-group-addon" ng-click="search('https://watchandlearn.scholastic.com/pages/search-results.html')">Search</button></form>
+                                    </div>
+                                </div>
+                                
+                                <button class="header-icon sw-icon search-icon" ng-click="mobileSearch('https://watchandlearn.scholastic.com/pages/search-results.html')" aria-controls="global-navigation-container-search-input-icon" ng-attr-aria-label="{{getButtonAriaLabel()}}">
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="nav-primary-block">
+                        <div class="row collapse navbar-collapse">
+                            <div class="col-md-12 nav-primary-items">
+                                <ul class="nav navbar-nav menu-list loggedIn-menu">
+                                    <li class="dropdown js-dropdown hidden-nav science-logo">
+                                        
+                                            
+                                            <a ng-href="{{isLockedMode ? 'javascript:void(0)': 'https://watchandlearn.scholastic.com/home-page-logged-in.html'}}" class="has-authorable-logo" aria-label="Link to Watch &amp; Learn homepage" tabindex="1">
+                                                <img src="/content/dam/classroom-magazines/watchandlearn/misc/logo-watchandlearn.png" alt="Global nav header logo"/>
+                                            </a>
+                                        
+                                    </li>
+                                    <div class="global-nav-items-container">
+
+
+
+
+    
+    
+    <div class="global-nav-config parbase">
+<div>                                                          
+	
+    <li class="dropdown js-dropdown js-dropdown-dynamic  nav-element" ng-if="isLockedMode ? false : (false ? !isstudent : true)">
+        <a class="app-nav-main-item-link" href="https://watchandlearn.scholastic.com/videos.html">
+            Videos
+        </a>
+        
+        
+    </li>    
+</div></div>
+
+
+    
+    
+    <div class="global-nav-config parbase">
+<div>                                                          
+	
+    <li class="dropdown js-dropdown js-dropdown-dynamic  nav-element" ng-if="isLockedMode ? false : (false ? !isstudent : true)">
+        <a class="app-nav-main-item-link" href="https://watchandlearn.scholastic.com/pages/think-sheets.html">
+            Think Sheets
+        </a>
+        
+        
+    </li>    
+</div></div>
+
+
+    
+    
+    <div class="global-nav-config parbase">
+<div>                                                          
+	
+    <li class="dropdown js-dropdown js-dropdown-dynamic  nav-element" ng-if="isLockedMode ? false : (false ? !isstudent : true)">
+        <a class="app-nav-main-item-link" href="https://watchandlearn.scholastic.com/pages/howto.html">
+            How to Use
+        </a>
+        
+        
+    </li>    
+</div></div>
+
+
+</div>
+
+                                    
+										
+
+	
+
+                                    
+
+                                    
+                                        <li class="dropdown js-dropdown dynamic_more_list">
+                                            <button class="dropdown-toggle app-nav-main-item-link" type="button" data-toggle="dropdown">More <span class="caret"></span>
+                                            </button>
+                                            <ul aria-label="More" class="dropdown-menu dynamic-menu">
+                                            </ul>
+                                        </li>
+                                    
+                                    <li class="nav-control hidden-nav" ng-show="!isLockedMode">
+                                        <form role="search" class="navbar-form nav-search-form" action="#" onsubmit="return false;" autocomplete="off">
+                                            <label for="global-navigation-container-search-input" class="sr-only">Search this site</label>
+                                            <input type="search" role="combobox" id="global-navigation-container-search-input" class="form-control" ng-model="searchText" placeholder="Enter Keyword" uib-typeahead="suggestion for suggestion in getSuggestions($viewValue) | limitTo: 5" typeahead-min-length="4" typeahead-focus-first="false" typeahead-on-select="search('https://watchandlearn.scholastic.com/pages/search-results.html')"/>
+                                            <button type="submit" class="input-group-addon" ng-click="search('https://watchandlearn.scholastic.com/pages/search-results.html')">Search</button>
+                                        </form>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="switch-homepage-link-tablet-mobile" ng-if="isSwitchHomePageVisible" ng-click="switchHomepage()" tabindex="0" role="button">Switch Homepage</div>
+            </div>
+        </div>
+        <div id="mobile-hover">
+            <div class="pop-over-menu-div" trap-focus role="dialog" aria-modal="true">
+                <div class="popover-wrap">
+                    <button class="nav-menu-close-btn" aria-label="Close menu"></button>
+                    <div class="js-nav-menu"></div>
+                </div>
+            </div>
+        </div>
+        <div id="font-load-LatoR">&nbsp;</div>
+        <div id="font-load-LatoB">&nbsp;</div>
+        <div>
+<div class="loginPrompt-wrapper">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-0">
+        <div class="modal-dialog login-dialog" role="document">
+            <div class="modal-content login-content">
+                <div class="modal-close-button close-notsubscribe-modal">
+                    <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close" ng-click="goBack()">
+                    <span aria-hidden="true">
+                        <span class="sw-icon close-big-icon"></span>
+                    </span>
+                    </button>
+                </div>
+                <div class="login-content-wrapper">
+                    <div class="modal-header login-header">
+                        <h4 class="modal-title login-title" id="myModalLabel-0">Sign in to Your Account</h4>
+                    </div>
+                    <div class="modal-body login-body" ng-show="!showWait">
+                        <div class="row nomarLR">
+                            <div class="col-xs-6 col-sm-5 teacher-block">
+                                <span class="login-teacher-icon" ng-click="login('https://digital.scholastic.com/launch-app', 'staff')"></span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 student-block">
+                                <span class="login-student-icon" ng-click="login('https://digital.scholastic.com/class-passcode', 'classroom')"></span>
+                            </div>
+                        </div>
+                        <div class="row nomarLR selector-section">
+                            <div class="col-xs-6 col-sm-5 teacher-btn-block">
+                                <div class="teacher-sec">
+                                    <form>
+                                        <label for="teacher-0">
+                                            <input class="teacher-selector" type="submit" name="role" id="teacher-0" value="I am a Teacher" ng-model="isOptionSelected" ng-click="login('https://digital.scholastic.com/launch-app', 'staff')"/>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-5 student-btn-block">
+                                <div class="student-sec">
+                                    <form>
+                                        <label for="student-0">
+                                            <input class="student-selector" type="submit" name="role" value="I am a Student" id="student-0" ng-model="isOptionSelected" ng-click="login('https://digital.scholastic.com/class-passcode', 'classroom')"/>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subscriber-sec">
+                            <p>Haven't signed into your Scholastic account before?</p>
+                            <a href="https://digital.scholastic.com/sign-in/create-account">Create an account</a>
+                        </div>
+                        <div class="row nomarLR notyet-subscriber-sec">
+                            <div class="border-section">
+                                <div class="middle-border"></div>
+                            </div>
+                            <p class="not-yet-subscribe">
+                                <span>Teachers, not yet a subscriber?</span></p>
+                            <div class="subscribe-link">
+                                <a ng-click="paywallSubscribeClick('Subscribe now')" ng-href="javascript:void(0)" data-redirect-url="http://www.scholastic.com/digital/watchandlearn/freetrial.htm" id="subscribe-now-link" class="js-subscribe-button">Subscribe now</a>
+                            </div>
+                            <div class="subscribe-recieve">
+                                <p class="description">Subscribers receive access to the website and print magazine.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body login-body" ng-show="showWait">
+                        <div class="login-wait">
+                            <div class="row">
+
+                            </div>
+                            <div class="row">
+                                <p>You are being redirecting to Scholastic's authentication page...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer goback-footer-sec" ng-show="showWait">
+                        <div class="go-back-footer" data-dismiss="modal" ng-click="goBack()">
+
+                            <span>GO BACK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="loginPrompt-wrapper">
+    <div class="modal fade" id="sw-authorize-login-prompt-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog login-dialog" role="document">
+            <div class="modal-content login-content">
+                <div class="modal-close-button">
+                    <button type="button" class="close close-button" aria-label="Close" id="sw-authorize-login-prompt-close">
+                        <span aria-hidden="true">
+                            <span class="sw-icon close-big-icon"></span>
+                        </span>
+                        </button>
+                </div>
+                <div class="login-content-wrapper">
+                    <div class="modal-header login-header">
+                        <h4 class="modal-title login-title" id="myModalLabel-1">
+                            Sign in to Your Account</h4>
+                    </div>
+                    <div class="modal-body login-body js-sw-login-modal-body" id="swModelshowBody" ng-show="!showWait">
+                        <div class="row nomarLR">
+                            <div class="col-xs-6 col-sm-5 not-subscribe-teacher-block">
+                                <span class="login-teacher-icon" ng-click="login('https://digital.scholastic.com/launch-app', 'staff')"></span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 student-block">
+                                <span class="login-student-icon" ng-click="login('https://digital.scholastic.com/class-passcode', 'classroom')"></span>
+                            </div>
+                        </div>
+                        <div class="row nomarLR selector-section">
+                            <div class="col-xs-6 col-sm-5 teacher-btn-block">
+                                <div class="teacher-sec">
+                                    <form>
+                                        <label for="teacher-1">
+                                                <input class="teacher-selector" type="submit" name="role" id="teacher-1" value="I am a Teacher" ng-model="isOptionSelected" ng-click="login('https://digital.scholastic.com/launch-app', 'staff')"/>
+                                            </label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-5 student-btn-block">
+                                <div class="student-sec">
+                                    <form>
+                                        <label for="student-1">
+                                                <input class="student-selector" type="submit" name="role" value="I am a Student" id="student-1" ng-model="isOptionSelected" ng-click="login('https://digital.scholastic.com/class-passcode', 'classroom')"/>
+                                            </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subscriber-sec bottom-subscribe-sec">
+                            <p>Haven't signed into your Scholastic account before?</p>
+                            <a href="https://digital.scholastic.com/sign-in/create-account">Create an account</a>
+                        </div>
+                        <div class="border-sec-notyetsubscribe">
+                            <div class="middle-border"></div>
+                        </div>
+                        <div class="row nomarLR not-yet-login-account">
+                            <p>Teachers, not yet a subscriber?</p>
+                        </div>
+                        <div class="notyet-subscriber-sec subscribe-now">
+                            <a ng-click="paywallSubscribeClick('Subscribe now')" ng-href="javascript:void(0)" data-redirect-url="http://www.scholastic.com/digital/watchandlearn/freetrial.htm" id="subscribe-now-link-2" class="js-subscribe-button">Subscribe now</a>
+                        </div>
+                        <div class="subscribe-recieve">
+                            <p class="description">Subscribers receive access to the website and print magazine.</p>
+                        </div>
+                    </div>
+                    <div class="modal-body login-body js-sw-login-modal-wait" ng-show="showWait">
+                        <div class="login-wait">
+                            <div class="row">
+
+                            </div>
+                            <div class="row">
+                                <p class="redirect-massage">You are being redirecting to Scholastic's authentication page...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer goback-footer-sec js-sw-login-modal-wait" ng-show="showWait">
+                        <div class="go-back-footer" data-dismiss="modal" ng-click="goBack()">
+
+                            <span id="modal-go-back">GO BACK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+        <sw-google-forms-modal client-id="768604179605-tj1u9jgd3uookv3lqi5ja670f4u2rmic.apps.googleusercontent.com" secret-key="ftiNmMTvsZXcoIVqtl0W64RQ" image-src="/etc/designs/scholastic/classroom-magazines-migration/images/googleForms/google-quiz-thumb.png">
+        </sw-google-forms-modal>
+        <div id="sdm-nav" class="sdm-nav"></div>
+    </div>
+    
+    
+
+    
+</div>
+</div>
+</div>
+
+    
+        
+        
+        <div class="reference parbase"><div class="cq-dd-paragraph"><div class="marketing-global-navigation-container marketing-global-nav-container parbase">
+
+
+
+
+
+<input id="sw-sdm-home-page-logged-in" type="hidden" value="https://watchandlearn.scholastic.com/home-page-logged-in.html"/>
+<input id="sw-sdm-home-page-logged-in-back-up" type="hidden" value="https://watchandlearn.scholastic.com/home-page-logged-in.html"/>
+<input id="sw-sdm-home-page-logged-in-teacher" type="hidden"/>
+<input id="sw-sdm-home-page-logged-out" type="hidden" value="https://watchandlearn.scholastic.com/home-page-logged-out.html"/>
+<input id="sw-sdm-two-logged-in-home-pages" type="hidden"/>
+<input id="sw-sdm-enable-student-home-page" type="hidden"/>
+<input id="sw-js-sdm-logout-url" type="hidden" js-data-core-sdm-logout="https://watchandlearn.scholastic.com/home-page-logged-out.html"/>
+
+
+    <div class="container-fluid marketing-app-nav-bar-main-container" ng-if="!isLoggedInUser" data-lang-promo-code="1234" ng-controller="globalNavigationController" ng-init="searchPagePath='/content/classroom_magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/whats-in-the-night-sky';recordsPerPage=12;">
+
+    <div class="global-nav-container">
+    
+    
+    
+        <div class="navbar navbar-default app-navbar-header">
+            <div class="row app-nav-primary">
+                <div class="col-xs-12 col-sm-12 pad0">
+                    <div class="row navbar-header app-nav-header">
+                        <div class="col-xs-2 col-sm-1 menu-icon-block">
+                            <button class="navbar-toggle collapsed pull-left nav-header-item nav-menu-icon" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="col-xs-5 col-sm-4 navbar-toggle pull-left nav-header-item search-logo-block">
+                            
+                                
+                                <a href="https://watchandlearn.scholastic.com/home-page-logged-out.html" class="has-authorable-logo" aria-label="Link to Watch &amp; Learn homepage">
+                                    <img src="/content/dam/classroom-magazines/watchandlearn/misc/logo-watchandlearn.png" alt="Global nav header logo"/>
+                                </a>
+                            
+                        </div>
+                        <div class="navbar-toggle nav-header-item pull-right profile-icon-block" data-toggle="collapse" data-target=".navbar-collapse">
+                            
+                                <a ng-click="navSubscribeClick('Free Trial')" ng-href="javascript:void(0)" data-redirect-url="http://www.scholastic.com/digital/watchandlearn/freetrial.htm?magazineName={{appNameForSubscription}}" data-promo-code="1234" class="primary-button js-subscribe-button" style="color: ; background: ">
+                                    Free Trial
+                                </a>
+                            
+                            
+                            
+                                <button ng-click="tempLoginClick('https://digital.scholastic.com/site/launch/watchandlearn/?ref=MTY4OTIzNzcxNTUxN3xodHRwOi8vd2F0Y2hhbmRsZWFybi5zY2hvbGFzdGljLmNvbS9jb250ZW50L2NsYXNzcm9vbV9tYWdhemluZXMvd2F0Y2hhbmRsZWFybi92aWRlb3MvZWFydGgtYW5kLXNwYWNlL2VhcnRoLXNjaWVuY2UtYW5kLXNwYWNlL3doYXRzLWluLXRoZS1uaWdodC1za3kuaHRtbA==')" class="secondary-button hidden-xs">Log in</button>
+                                
+                            
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-md-12" id="app-nav-primary-block">
+                    <div class="row collapse navbar-collapse">
+                        <div class="col-md-12 nav-primary-items">
+                            <ul class="nav navbar-nav menu-list menu-list-primary loggedOut-menu">
+                                <li class="dropdown js-dropdown hidden-nav science-logo">
+                                    <!-- <div class="scholastic-logo-header"></div> taken out to account for scholastic bar being included in png-->
+                                    
+                                        
+                                        <a href="https://watchandlearn.scholastic.com/home-page-logged-out.html" class="has-authorable-logo" aria-label="Link to Watch &amp; Learn homepage">
+                                            <img src="/content/dam/classroom-magazines/watchandlearn/misc/logo-watchandlearn.png" alt="Global nav header logo"/>
+                                        </a>
+                                    
+                                </li>
+                                <!-- Latest Issue-->
+                                <div role="listitem" class="marketing-global-nav-items-container">
+
+
+
+
+</div>
+                                <!--LFO Explore-->
+                                
+
+	
+
+                                    <li class="dropdown js-dropdown dynamic_more_list">
+                                        <a class="dropdown-toggle app-nav-main-item-link" data-toggle="dropdown" tabindex="0" onkeyup="event.key=='Enter' ? this.click() : ''">More <span class="caret"></span></a>
+                                        <ul aria-label="More" class="dropdown-menu dynamic-menu"></ul>
+                                    </li>
+                                <li class="pull-right cta-button-container">
+                                    
+                                        <a ng-click="navSubscribeClick('Free Trial')" ng-href="javascript:void(0)" data-redirect-url="http://www.scholastic.com/digital/watchandlearn/freetrial.htm?magazineName={{appNameForSubscription}}" data-promo-code="1234" class="primary-button js-subscribe-button" style="color: ; background: ">Free Trial</a>
+                                    
+                                    
+                                    
+                                        <button ng-click="tempLoginClick('https://digital.scholastic.com/site/launch/watchandlearn/?ref=MTY4OTIzNzcxNTUxN3xodHRwOi8vd2F0Y2hhbmRsZWFybi5zY2hvbGFzdGljLmNvbS9jb250ZW50L2NsYXNzcm9vbV9tYWdhemluZXMvd2F0Y2hhbmRsZWFybi92aWRlb3MvZWFydGgtYW5kLXNwYWNlL2VhcnRoLXNjaWVuY2UtYW5kLXNwYWNlL3doYXRzLWluLXRoZS1uaWdodC1za3kuaHRtbA==')" class="secondary-button">Log in</button>
+                                        
+                                    
+                                    
+                                        
+                                        
+                                    
+                                </li>
+                                
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div id="mobile-hover">
+        <div class="pop-over-menu-div" trap-focus role="dialog" aria-modal="true">
+            <button aria-label="Close menu" class="nav-menu-close-btn"></button>
+            <div class="js-nav-menu">
+            </div>
+        </div>
+    </div>
+	<div>
+<div class="loginPrompt-wrapper">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-0">
+        <div class="modal-dialog login-dialog" role="document">
+            <div class="modal-content login-content">
+                <div class="modal-close-button close-notsubscribe-modal">
+                    <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close" ng-click="goBack()">
+                    <span aria-hidden="true">
+                        <span class="sw-icon close-big-icon"></span>
+                    </span>
+                    </button>
+                </div>
+                <div class="login-content-wrapper">
+                    <div class="modal-header login-header">
+                        <h4 class="modal-title login-title" id="myModalLabel-0">Sign in to Your Account</h4>
+                    </div>
+                    <div class="modal-body login-body" ng-show="!showWait">
+                        <div class="row nomarLR">
+                            <div class="col-xs-6 col-sm-5 teacher-block">
+                                <span class="login-teacher-icon" ng-click="login('https://digital.scholastic.com/launch-app', 'staff')"></span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 student-block">
+                                <span class="login-student-icon" ng-click="login('https://digital.scholastic.com/class-passcode', 'classroom')"></span>
+                            </div>
+                        </div>
+                        <div class="row nomarLR selector-section">
+                            <div class="col-xs-6 col-sm-5 teacher-btn-block">
+                                <div class="teacher-sec">
+                                    <form>
+                                        <label for="teacher-0">
+                                            <input class="teacher-selector" type="submit" name="role" id="teacher-0" value="I am a Teacher" ng-model="isOptionSelected" ng-click="login('https://digital.scholastic.com/launch-app', 'staff')"/>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-5 student-btn-block">
+                                <div class="student-sec">
+                                    <form>
+                                        <label for="student-0">
+                                            <input class="student-selector" type="submit" name="role" value="I am a Student" id="student-0" ng-model="isOptionSelected" ng-click="login('https://digital.scholastic.com/class-passcode', 'classroom')"/>
+                                        </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subscriber-sec">
+                            <p>Haven't signed into your Scholastic account before?</p>
+                            <a href="https://digital.scholastic.com/sign-in/create-account">Create an account</a>
+                        </div>
+                        <div class="row nomarLR notyet-subscriber-sec">
+                            <div class="border-section">
+                                <div class="middle-border"></div>
+                            </div>
+                            <p class="not-yet-subscribe">
+                                <span>Teachers, not yet a subscriber?</span></p>
+                            <div class="subscribe-link">
+                                <a ng-click="paywallSubscribeClick('Subscribe now')" ng-href="javascript:void(0)" data-redirect-url="http://www.scholastic.com/digital/watchandlearn/freetrial.htm" id="subscribe-now-link" class="js-subscribe-button">Subscribe now</a>
+                            </div>
+                            <div class="subscribe-recieve">
+                                <p class="description">Subscribers receive access to the website and print magazine.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body login-body" ng-show="showWait">
+                        <div class="login-wait">
+                            <div class="row">
+
+                            </div>
+                            <div class="row">
+                                <p>You are being redirecting to Scholastic's authentication page...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer goback-footer-sec" ng-show="showWait">
+                        <div class="go-back-footer" data-dismiss="modal" ng-click="goBack()">
+
+                            <span>GO BACK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="loginPrompt-wrapper">
+    <div class="modal fade" id="sw-authorize-login-prompt-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog login-dialog" role="document">
+            <div class="modal-content login-content">
+                <div class="modal-close-button">
+                    <button type="button" class="close close-button" aria-label="Close" id="sw-authorize-login-prompt-close">
+                        <span aria-hidden="true">
+                            <span class="sw-icon close-big-icon"></span>
+                        </span>
+                        </button>
+                </div>
+                <div class="login-content-wrapper">
+                    <div class="modal-header login-header">
+                        <h4 class="modal-title login-title" id="myModalLabel-1">
+                            Sign in to Your Account</h4>
+                    </div>
+                    <div class="modal-body login-body js-sw-login-modal-body" id="swModelshowBody" ng-show="!showWait">
+                        <div class="row nomarLR">
+                            <div class="col-xs-6 col-sm-5 not-subscribe-teacher-block">
+                                <span class="login-teacher-icon" ng-click="login('https://digital.scholastic.com/launch-app', 'staff')"></span>
+                            </div>
+                            <div class="col-xs-6 col-sm-4 student-block">
+                                <span class="login-student-icon" ng-click="login('https://digital.scholastic.com/class-passcode', 'classroom')"></span>
+                            </div>
+                        </div>
+                        <div class="row nomarLR selector-section">
+                            <div class="col-xs-6 col-sm-5 teacher-btn-block">
+                                <div class="teacher-sec">
+                                    <form>
+                                        <label for="teacher-1">
+                                                <input class="teacher-selector" type="submit" name="role" id="teacher-1" value="I am a Teacher" ng-model="isOptionSelected" ng-click="login('https://digital.scholastic.com/launch-app', 'staff')"/>
+                                            </label>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-5 student-btn-block">
+                                <div class="student-sec">
+                                    <form>
+                                        <label for="student-1">
+                                                <input class="student-selector" type="submit" name="role" value="I am a Student" id="student-1" ng-model="isOptionSelected" ng-click="login('https://digital.scholastic.com/class-passcode', 'classroom')"/>
+                                            </label>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subscriber-sec bottom-subscribe-sec">
+                            <p>Haven't signed into your Scholastic account before?</p>
+                            <a href="https://digital.scholastic.com/sign-in/create-account">Create an account</a>
+                        </div>
+                        <div class="border-sec-notyetsubscribe">
+                            <div class="middle-border"></div>
+                        </div>
+                        <div class="row nomarLR not-yet-login-account">
+                            <p>Teachers, not yet a subscriber?</p>
+                        </div>
+                        <div class="notyet-subscriber-sec subscribe-now">
+                            <a ng-click="paywallSubscribeClick('Subscribe now')" ng-href="javascript:void(0)" data-redirect-url="http://www.scholastic.com/digital/watchandlearn/freetrial.htm" id="subscribe-now-link-2" class="js-subscribe-button">Subscribe now</a>
+                        </div>
+                        <div class="subscribe-recieve">
+                            <p class="description">Subscribers receive access to the website and print magazine.</p>
+                        </div>
+                    </div>
+                    <div class="modal-body login-body js-sw-login-modal-wait" ng-show="showWait">
+                        <div class="login-wait">
+                            <div class="row">
+
+                            </div>
+                            <div class="row">
+                                <p class="redirect-massage">You are being redirecting to Scholastic's authentication page...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer goback-footer-sec js-sw-login-modal-wait" ng-show="showWait">
+                        <div class="go-back-footer" data-dismiss="modal" ng-click="goBack()">
+
+                            <span id="modal-go-back">GO BACK</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <sw-google-forms-modal client-id="768604179605-tj1u9jgd3uookv3lqi5ja670f4u2rmic.apps.googleusercontent.com" secret-key="ftiNmMTvsZXcoIVqtl0W64RQ" image-src="/etc/designs/scholastic/classroom-magazines-migration/images/googleForms/google-quiz-thumb.png">
+    </sw-google-forms-modal>
+</div></div>
+</div>
+</div>
+
+    
+
+</div>
+
+    
+
+
+                                </nav>
+                                <main class="scholastic-main-wrapper" ng-style="setBackground('','')">
+                                    <!-- /*<div data-sly-resource="entitlement"></div> */-->
+<div>
+    
+
+	
+<div ng-controller="paywallModalController" ng-click="redirectToPreviousPage($event)" class="modal fade paywallModalElement" id="memberModal" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true" aria-modal="true" trap-focus tabindex="-1" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="marketing_paywall_container">
+                    <div class="marketing_paywall">
+                        <button class="paywallModalClose" ng-click="redirectToPreviousPage($event)" data-dismiss="modal" aria-label="paywall Modal Close Icon">
+                        </button>
+                        <div class="paywall_Heading"> <p>Subscriber Only Resources</p>
+</div>
+                        <div class="text-center cta-button-container">
+                            
+                            
+                            
+                            <a ng-href="http://www.scholastic.com/digital/watchandlearn/freetrial.htm?magazineName={{appNameForSubscription}}" class="primary-button">Subscribe</a>
+                            
+                                <button class="secondary-button" type="button" onclick="window.location='https://digital.scholastic.com/site/launch/watchandlearn'">
+                                    Log in 
+                                </button>
+                            
+                            
+                        </div>
+                        <div class="paywall_description-container">
+                            <div class="paywall_box">
+                                <div class="paywall_image">
+                                    
+                                    <img class="hidden-xs" src="/content/dam/classroom-magazines/watchandlearn/homepage-logged-in/videolibrary-logo-desktop.png" alt/>
+                                    
+                                    <img class="visible-xs-inline-block" src="/content/dam/classroom-magazines/watchandlearn/homepage-logged-in/videolibrary-logo-mobile.png" alt/>
+                                </div>
+                                <div class="paywall_content">
+                                    
+                                        <div class="paywall_title"> <p>Start Your Free Trial</p>
+</div>
+                                    
+                                    <div class="paywall_description"> <p>Access this video and hundreds more like it with a FREE TRIAL to Watch &amp; Learn Video Library. No obligation or credit card is required.</p>
+</div>
+                                    <div class="paywall_hypertextLink">
+                                        <a target="_blank" href="https://watchandlearn.scholastic.com/">
+                                            Learn More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+
+</div>
+<div>
+    <div>
+
+</div>
+</div>
+<div>
+    <div><!--
+            EReader configuration component.
+-->
+
+<div id="eReader-page-path" data-eReader-core-path="/content/classroom_magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/whats-in-the-night-sky"></div>
+
+
+    <div id="ereaderConfig"></div>
+	<div id="ereaderSpanishConfig"></div>
+    <script type="text/javascript" src="/etc/designs/scholastic/classroom-magazines-migration/clientlibs/reader/bundle.reader.js"></script>
+
+    
+
+    
+
+    <script>
+        var getParameterByName = function (name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+        var ereaderPageIdVal = getParameterByName('ereaderPageId'),
+            ereaderLangVal = getParameterByName('lang');
+        if (ereaderPageIdVal) {
+            reader.options.pageId = ereaderPageIdVal;
+            var sdmCookie = getCookie("sdm_nav_ctx");
+            if (sdmCookie) {
+                var language_val = '';
+                if (ereaderLangVal) {
+                    language_val = ereaderLangVal.toLowerCase();
+
+                    if (language_val === "en") {
+                        reader.open();
+                    } else if (language_val === "es") {
+
+                        readerSpanish.options.pageId = ereaderPageIdVal;
+                        readerSpanish.open();
+                    }
+                }
+            }
+        }
+    </script>
+</div>
+</div>
+<div class="issue-page-template">
+    
+
+
+
+
+    
+    
+    <div class="marketing-VideoAndCTA parbase">
+
+
+
+<div class="videoAndCTA-wrapper" ng-controller="videoAndCtaController" ng-init="pagePath='/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/wall-2018-whatsinthenightskymp4'">
+    <div class="video-section">
+        
+        <sw-marketing-content-tile image-src="/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/wall-2018-whatsinthenightskymp4.transform/content-tile-large/image.png" image-hyperlink="/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/wall-2018-whatsinthenightskymp4" content-type="video" video-id="5828505077001" video-length="3:52" video-title="What&#39;s in the Night Sky?" role="everyone" image-alt class="marketing-content-tile">
+        </sw-marketing-content-tile>
+        <div class="video-information">
+            <div class="video-information-details">
+                <h1 class="title"> What&#39;s in the Night Sky? </h1>
+                
+                <span class="description"> What can you observe when you look up at the night sky? </span>
+            </div>
+            <div class="time">
+                <span class="time-icon"></span>
+                <span class="time-duration">{{getVideoDurationCaption('3:52')}}</span>
+                
+                    <div class="credit"><p>Shutterstock.com</p>
+</div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="cta-section">
+        
+            <p class="cta-section-title"> Lesson Resources </p>
+        
+        
+        <div class="cta-container">
+            
+                
+                    <button class="cta-button" data-toggle="modal" data-target="#keywordsListModal" ng-click="statsTrackHelper('#keywordsListModal')">
+                        <span class="cta-icon"></span>
+                        <span class="cta-label"><p>Key Words</p>
+</span>
+                    </button>
+                
+                    <button class="cta-button" data-toggle="modal" data-target="#quizWhizModal" ng-click="statsTrackHelper('#quizWhizModal')">
+                        <span class="cta-icon"></span>
+                        <span class="cta-label"><p>Quiz Whiz</p>
+</span>
+                    </button>
+                
+            
+        </div>
+    </div>
+</div></div>
+
+
+    
+    
+    <div class="marketing-teaching-information parbase">
+
+	
+		<div class="teaching-information-container">
+			<p class="teaching-information-title">Teaching Information</p>
+			<div class="row teaching-information-content">
+				<div class="col-md-8 col-lg-9 teaching-information-left">
+					
+						<div class="teaching-information-left-content">
+							<div class="teaching-information-left-content-title"><p>Categories</p>
+</div>
+							<div class="teaching-information-left-content-description"><p><a href="https://watchandlearn.scholastic.com/videos/earth-and-space.html"><b>Earth and Space</b></a></p>
+<p> </p>
+<p><a href="https://watchandlearn.scholastic.com/videos/earth-and-space/earth-science-and-space.html">Earth Science and Space</a><br />
+</p>
+</div>
+						</div>
+					
+						<div class="teaching-information-left-content">
+							<div class="teaching-information-left-content-title"><p>Standards</p>
+</div>
+							<div class="teaching-information-left-content-description"><p><b>Earth and Space:</b></p>
+<p>The cycle and patterns of the sun, moon, and stars can be observed.The cycle and patterns of the sun, moon, and stars can be observed.<br />
+</p>
+</div>
+						</div>
+					
+						<div class="teaching-information-left-content">
+							<div class="teaching-information-left-content-title"><p>Key Words</p>
+</div>
+							<div class="teaching-information-left-content-description"><p>comet</p>
+<p> </p>
+<p>meteor (shooting star)</p>
+<p> </p>
+<p>orbit</p>
+<p> </p>
+<p>phases of the moon</p>
+<p> </p>
+<p>star</p>
+<p> </p>
+<p>waning</p>
+<p> </p>
+<p>waxing</p>
+</div>
+						</div>
+					
+				</div>
+				<div class="col-md-4 col-lg-3 teaching-information-right">
+					
+						
+							<a href="https://watchandlearn.scholastic.com/pages/think-sheets.html" class="teaching-information-cta"><p>Think Sheets</p>
+</a>
+						
+					
+						
+							<a href="https://watchandlearn.scholastic.com/videos/earth-and-space/earth-science-and-space/que-hay-en-el-cielo-nocturno.html" class="teaching-information-cta"><p>Switch to Spanish</p>
+</a>
+						
+					
+				</div>
+			</div>
+		</div>
+	
+</div>
+
+
+    
+    
+    <div class="keywords">
+
+<div id="keywordsListModal" tabindex="-1" class="modal fade keywordsModal" role="dialog" ng-controller="keywordsController" aria-modal="true" trap-focus>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button id="keywordsModalCloseIcon" class="keywordsModalClose" data-dismiss="modal" aria-label="Keywords Modal Close Icon"></button>
+                <h4 class="modal-title">Key Words</h4>
+                <div class="keywordsAudioSection">
+                    <button class="keywordsAudioIcon" aria-label="Audio Icon" ng-class="{'active': isAudioPlaying}" ng-click="toggleAudio()"></button><p class="modal-description">As you watch the video, listen for these important words.</p>
+                </div>
+            </div>
+            <div class="modal-body keywordsSection">
+                
+                    <div class="keywordText">
+                        <p>comet<br />
+</p>
+
+                    </div>
+                
+                    <div class="keywordText">
+                        <p>meteor (shooting star)<br />
+</p>
+
+                    </div>
+                
+                    <div class="keywordText">
+                        <p>orbit<br />
+</p>
+
+                    </div>
+                
+                    <div class="keywordText">
+                        <p>phases of the moon<br />
+</p>
+
+                    </div>
+                
+                    <div class="keywordText">
+                        <p>star<br />
+</p>
+
+                    </div>
+                
+                    <div class="keywordText">
+                        <p>waning<br />
+</p>
+
+                    </div>
+                
+                    <div class="keywordText">
+                        <p>waxing<br />
+</p>
+
+                    </div>
+                
+            </div>
+        </div>
+        <audio id="keywordsModalAudio" class="keywordsAudio" tabindex="-1">
+            <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/VL-WhatsintheNightSky_EN-ImportantWords.mp3"/>
+        </audio>
+    </div>
+</div></div>
+
+
+    
+    
+    <div class="quiz-whiz">
+
+<div id="quizWhizModal" tabindex="-1" class="modal fade quizModal" role="dialog" ng-controller="quizWhizController" ng-init="totalQuestions = 5" aria-modal="true" trap-focus>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content quizSection">
+            <div class="modal-header">
+                <button id="quizWhizModalCloseIcon" class="sw-icon quizModalClose" data-dismiss="modal" aria-label="Quiz Whiz Modal Close Icon"></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div ng-if="!isFinalPage">
+                
+                    <div class="modal-body questionAndAnswersSection" ng-if="currentQuestionNumber === 1">
+                        <div class="quizQuestionSection">
+                            <button class="sw-icon quizAudioIcon" ng-class="{'active': isAudioPlaying}" aria-label="Quiz Whiz Question and Answers Audio Icon" ng-click="toggleAudio($event)"></button>
+                            <audio class="quizQuestionAnswerAudio">
+                                <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/VL-WhatsintheNightSky_EN-Q1.mp3"/>
+                            </audio>
+                            <div class="quizQuestion"><span class="questionNumber">1.</span><p>The sky becomes dark when the earth turns away from the sun.    <br />
+
+</p>
+
+</div>
+                        </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }">
+                                    <p>true    <br />
+</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }">
+                                    <p>false    <br />
+</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                    </div>
+                
+                    <div class="modal-body questionAndAnswersSection" ng-if="currentQuestionNumber === 2">
+                        <div class="quizQuestionSection">
+                            <button class="sw-icon quizAudioIcon" ng-class="{'active': isAudioPlaying}" aria-label="Quiz Whiz Question and Answers Audio Icon" ng-click="toggleAudio($event)"></button>
+                            <audio class="quizQuestionAnswerAudio">
+                                <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/VL-WhatsintheNightSky_EN-Q2.mp3"/>
+                            </audio>
+                            <div class="quizQuestion"><span class="questionNumber">2.</span><p>Big balls of burning gas are called _________. <br />
+
+</p>
+
+</div>
+                        </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }">
+                                    <p>moons    <br />
+</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, 'true', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, 'true', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, 'true', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, 'true', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }">
+                                    <p>stars</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }">
+                                    <p>earths</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                    </div>
+                
+                    <div class="modal-body questionAndAnswersSection" ng-if="currentQuestionNumber === 3">
+                        <div class="quizQuestionSection">
+                            <button class="sw-icon quizAudioIcon" ng-class="{'active': isAudioPlaying}" aria-label="Quiz Whiz Question and Answers Audio Icon" ng-click="toggleAudio($event)"></button>
+                            <audio class="quizQuestionAnswerAudio">
+                                <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/VL-WhatsintheNightSky_EN-Q3.mp3"/>
+                            </audio>
+                            <div class="quizQuestion"><span class="questionNumber">3.</span><p>What does <i>orbit </i>mean? <br />
+
+</p>
+
+</div>
+                        </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }">
+                                    <p><b> </b>to go around and around</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }">
+                                    <p>to become cold</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }">
+                                    <p>to go in a straight line</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                    </div>
+                
+                    <div class="modal-body questionAndAnswersSection" ng-if="currentQuestionNumber === 4">
+                        <div class="quizQuestionSection">
+                            <button class="sw-icon quizAudioIcon" ng-class="{'active': isAudioPlaying}" aria-label="Quiz Whiz Question and Answers Audio Icon" ng-click="toggleAudio($event)"></button>
+                            <audio class="quizQuestionAnswerAudio">
+                                <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/VL-WhatsintheNightSky_EN-Q4.mp3"/>
+                            </audio>
+                            <div class="quizQuestion"><span class="questionNumber">4.</span><p>Why can't you see the moon in the new moon phase?<br />
+
+</p>
+
+</div>
+                        </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }">
+                                    <p>because it's orbiting too quickly </p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }">
+                                    <p>because it's too far away</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, 'true', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, 'true', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, 'true', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, 'true', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }">
+                                    <p>because no light is shining on it</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                    </div>
+                
+                    <div class="modal-body questionAndAnswersSection" ng-if="currentQuestionNumber === 5">
+                        <div class="quizQuestionSection">
+                            <button class="sw-icon quizAudioIcon" ng-class="{'active': isAudioPlaying}" aria-label="Quiz Whiz Question and Answers Audio Icon" ng-click="toggleAudio($event)"></button>
+                            <audio class="quizQuestionAnswerAudio">
+                                <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/what-s-in-the-night-sky/english/VL-WhatsintheNightSky_EN-Q5.mp3"/>
+                            </audio>
+                            <div class="quizQuestion"><span class="questionNumber">5.</span><p>You can see a _________ two weeks after the new moon.<br />
+
+</p>
+
+</div>
+                        </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }" ng-if="1 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, 'true', 1)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 1 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 1) }">
+                                    <p>full moon</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }" ng-if="2 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 2)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 2 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 2) }">
+                                    <p>waxing crescent moon</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                            <div class="answer-wrapper">
+                                <span class="sw-icon option-letter-A" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 1"></span>
+                                <span class="sw-icon option-letter-B" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 2"></span>
+                                <span class="sw-icon option-letter-C" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }" ng-if="3 === 3"></span>
+                                <button class="quizAnswerText" ng-click="verifyTheAnswer($event, '', 3)" ng-class="{'correctAnswer': (answerSelected && isCorrect && selectedOptionNumber === 3 ), 'wrongAnswer':  (answerSelected && !isCorrect && selectedOptionNumber === 3) }">
+                                    <p>quarter moon</p>
+
+                                    <span class="correctOrWrongAnswerText">
+                                        <span class="sw-icon correctOrWrongAnswerIcon"></span>
+                                    </span>
+                                </button>
+                            </div>
+                        
+                    </div>
+                
+                <div class="ctaSection">
+                    <button type="button" class="btn nextButton" ng-click="proceedToNextQuestion(currentQuestionNumber)" ng-disabled="!(answerSelected && isCorrect)">Next</button>
+                </div>
+                <div class="quizProgress">
+                    <p class="quizProgressText">{{currentQuestionNumber}} of {{totalQuestions}}</p>
+                    <div class="quizProgressbar">
+                        <div class="quizProgressDisplay" ng-class="{'finalQuestionCorrect': (currentQuestionNumber === totalQuestions && isCorrect)}" ng-style="{'width': progressWidth + '%'}"></div>
+                    </div>
+                </div>
+                <audio class="quizCorrectAnswerAudio" tabindex="-1">
+                    <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/misc/correct.mp3"/>
+                </audio>
+                <audio class="quizWrongAnswerAudio" tabindex="-1">
+                    <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/misc/incorrect.mp3"/>
+                </audio>
+            </div>
+            <div ng-if="isFinalPage" class="modal-body quizFinalPage">
+                <div class="quizFinalPageImage">
+                    
+                    <img src="/content/dam/classroom-magazines/watchandlearn/homepage-logged-in/stars.gif" alt/>
+                </div>
+                <p class="quizFinalPageHeader">Great Job!</p>
+                <p class="quizFinalPageDescription">You got all the answers.</p>
+                <button type="button" data-dismiss="modal" class="btn doneCta">Done</button>
+                <audio class="finalPageAudio" tabindex="-1" ng-attr-autoplay="{{isFinalPage}}">
+                    <source type="audio/mpeg" src="/content/dam/classroom-magazines/watchandlearn/misc/win.mp3"/>
+                </audio>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+
+
+</div>
+<div>
+     <div>
+<input type="hidden" id="bookmarkSocialPostPath" value="/content/classroom_magazines/watchandlearn/videos/earth-and-space/earth-science-and-space/whats-in-the-night-sky/jcr:content/bookmark"/></div>
+</div>
+
+                                </main>
+                            </div>
+                            
+                            
+                            
+                            <footer lang="en" class="scholastic-container-wrapper">
+                                <div>
+	<div>
+		<div>
+			
+
+
+
+
+    
+        
+        
+        <div class="par iparys_inherited">
+
+    
+    
+    
+    
+
+</div>
+
+    
+        
+        
+        <div class="guide-footer parbase">
+
+
+<div class="ug-guide-footer-container">
+    <div class="ug-guide-footer-wrapper">
+        <span class="keep-left">
+            <a class="ug-guide-footer-logo-link" href="https://www.scholastic.com/home">
+                
+                    <img src="/etc/designs/scholastic/classroom-magazines-migration/images/ug-scholastic-logo.png" alt="Scholastic Home"/>
+                
+                
+            </a>
+            
+                <a class="ug-guide-footer-back-link" href="https://watchandlearn.scholastic.com/">
+                    
+                        Watch &amp; Learn
+                    
+                </a>
+            
+            
+                <span class="ug-backto-magazine-arrow" role="img" aria-label="Watch &amp; Learn"></span>
+            
+        </span>
+        <span class="keep-right">
+                
+                    
+                    <span class="ug-guide-footer-link-wrapper">
+                        <a href="http://www.scholastic.com/privacy.htm#kidsprivacy" lang="en">PRIVACY POLICY</a>
+                    </span>
+                
+                    
+                    <span class="ug-guide-footer-link-wrapper">
+                        <a href="http://www.scholastic.com/terms.htm" lang="en">Terms of Use</a>
+                    </span>
+                
+            <span class="ug-guide-footer-desc" lang="en">TM &reg; &amp; &copy; 2023 Scholastic Inc. All Rights Reserved.</span>
+        </span>
+    </div>
+</div></div>
+
+    
+
+
+		</div>
+		<div>
+			
+    <cm-modal class="s_video_player" aria-label="Video Modal" trap-focus>
+        <div class="container" id="s_bg_video_player">
+            <button class="video-close-icon" id="video-close-icon" type="button" title="Close" aria-disabled="false" onclick="s_close_video()">
+                <i class="fa fa-times glyphicon glyphicon-remove"></i>
+            </button>
+            <video controls crossorigin="anonymous" class="video-js" data-account="1543299976" data-player="rkQ0GMt8" data-embed="default" data-video-id="" id="modal_video_player" data-limelight-player="064e1e5412424e3598aa699b5a5aa4b1" data-limelight-dummy-video-id="c769336db2824f7aba2867d79f2878b3">
+            </video>
+        </div>
+    </cm-modal>
+
+		</div>
+		<div>
+    		<div class="s_youTubeVideo_player" aria-hidden="true">
+    <div class="container">
+        <div class="youTubeVideo_wrapper" role="dialog">
+            <iframe id="player1" frameborder="0" class="youtube-video" width="100%" height="100%" src=""></iframe>
+        </div>
+        <button class="video-close-icon" type="button" title="Close" aria-disabled="false">
+        	<i class="fa fa-times glyphicon glyphicon-remove"></i>
+        </button>
+    </div>
+</div>
+		</div>
+		<cm-modal id="game-container-modal" class="modal fade video-content-card-modal" tabindex="-1" labelledby="...">
+    <div class="modal-dialog game-container-modal" role="document">
+        <div class="modal-content">
+            <span class="close colse-popup-icon" data-dismiss="modal"></span>
+            <div class="modal-body" id="game-container-modal-body"></div>
+        </div>
+    </div>
+</cm-modal>
+	</div>
+	<div>
+		
+    
+    
+<script src="/etc/designs/scholastic/classroom-magazines-migration/videolibrary/clientlibs/common/js.min.465115d8458e41ace0e67e1101a6cdf4.js"></script>
+
+    
+
+
+
+
+
+    
+
+
+
+
+    <script type='text/javascript' src="//video.limelight.com/player/limelightjs-player.js"></script>
+
+
+    <script>
+        console.log("in the non-marketing non prod OR all PROD conditional");
+    </script>
+    <script src="https://apis.google.com/js/api.js" type="text/javascript" async></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<script src="//ltm.scholastic.com/ltm/resources/tag/footer.js"></script>
+
+	</div>
+</div>
+                            </footer>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v2cb3a2ab87c5498db5ce7e6608cf55231689030342039" integrity="sha512-DI3rPuZDcpH/mSGyN22erN5QFnhl760f50/te7FTIYxodEF8jJnSFnfnmG/c+osmIQemvUrnBtxnMpNdzvx1/g==" data-cf-beacon='{"rayId":"7e73b1c3db591353","token":"e5dab3f8e8324fde9079f5f13fe035e4","version":"2023.4.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
