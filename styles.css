@@ -1,3 +1,5 @@
+/********************** UNIVERSAL STYLES ************************************/
+
 * {
   box-sizing: border-box;
 }
@@ -16,6 +18,77 @@ img {
   min-width: 100%;
 }
 
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: rgb(189, 183, 183);
+}
+/************************************ NAV BARS ********************************************/
+
+#hi {
+  position: fixed;
+  top: 1em;
+  right: -1em;
+  color: rgb(189, 183, 183);
+  z-index: 100;
+  margin-right: 1.5em;
+  font-size: 4vh;
+  font-weight: 700;
+}
+
+#hi:hover {
+  cursor: pointer;
+  color: white;
+}
+
+#bye {
+}
+
+#nav {
+  position: fixed;
+  display: none;
+  right: 0%;
+  min-height: 50vh;
+  width: 15%;
+  min-width: fit-content;
+  z-index: 110;
+  color: white;
+  background-color: rgb(15, 15, 15);
+}
+
+#nav-links {
+  margin-top: 8em;
+}
+
+#nav p {
+  font-size: 1.3rem;
+  padding-left: 1.2em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+}
+
+#nav p:hover {
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+  filter: brightness(1.5);
+}
+
+#nav h1 {
+  color: rgb(189, 183, 183);
+  cursor: pointer;
+  position: fixed;
+  right: 2%;
+  top: 2%;
+  font-size: 4vh;
+  font-weight: 800;
+}
+
+#nav h1:hover {
+  color: white;
+}
+
+/*************************** PARALLAX 1 **************************************/
 .parallax-container {
   margin: 0 auto;
   position: relative;
@@ -52,18 +125,18 @@ img {
 }
 
 .foreground h1 {
-  font-size: 150px;
+  font-size: 15vh;
 }
 
 .foreground h3 {
-  font-size: 75px;
+  font-size: 7vh;
 }
 
 section {
   min-height: 90vh;
   padding: 5%;
 }
-
+/***************************************** SECTION 1 ****************************************/
 #one {
   background-color: rgba(38, 38, 43, 0.78);
   color: rgb(189, 183, 183);
@@ -85,7 +158,7 @@ section {
 }
 
 #intro p {
-  font-size: 2vh;
+  font-size: 2.2vh;
   padding-top: 11%;
 }
 
@@ -94,6 +167,13 @@ section {
   justify-content: center;
   align-items: center;
   width: 45%;
+}
+
+#me2 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
 
 #mypic {
@@ -110,6 +190,19 @@ section {
   object-fit: cover;
 }
 
+#mypic2 {
+  overflow: hidden;
+
+  border-radius: 50%;
+}
+
+#mypic2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 hr {
   height: 2px;
   border-color: #0baaf5;
@@ -118,7 +211,7 @@ hr {
   right: 37%;
   margin-top: 14%;
 }
-
+/*********************************** PARALLAX 2 *******************************************/
 #worker {
   opacity: 0.8;
   filter: blur(10px);
@@ -203,6 +296,10 @@ hr {
   transform: translateZ(0px);
 }
 
+.background2 img {
+  min-height: 100vh;
+}
+
 .background2 hr {
   height: 2px;
   border-color: #0baaf5;
@@ -240,7 +337,7 @@ hr {
   width: 70%;
   background-color: #0baaf5;
 }
-
+/************************************ SKILLS ********************************************/
 #skills {
   margin-top: 0%;
   background-color: rgba(38, 38, 43, 0.78);
@@ -378,7 +475,7 @@ hr {
   background-image: url("./images/bootstrap.png");
   background-size: 70%;
 }
-
+/************************************  PROJECTS  ********************************************/
 #projects {
   background-color: #2525378a;
   color: rgb(189, 183, 183);
@@ -445,7 +542,7 @@ hr {
   background-image: url("./images/trail.jpeg");
   background-size: cover;
 }
-
+/*************************CONTACT*****************************/
 #contact {
   background-image: url(./images/clear\ sky.jpeg);
   background-position: center;
@@ -536,69 +633,279 @@ label {
   filter: brightness(0.5);
 }
 
-#hi {
-  position: fixed;
-  top: 3%;
-  left: 95%;
-  color: rgb(189, 183, 183);
-  z-index: 100;
-  margin-right: 5%;
-  font-size: 4vh;
-  font-weight: 700;
+/**************MEDIA QUERIES************/
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+  #me {
+    display: none;
+  }
+
+  #me2 {
+    display: block;
+  }
+
+  #intro {
+    width: 100%;
+  }
+
+  .background2 img {
+    min-height: 340vh;
+  }
+
+  .foreground-content2 {
+    display: flex;
+    flex-direction: column;
+    width: 170vw;
+  }
+
+  .foreground-content2 div {
+    width: 100%;
+  }
+
+  #do {
+    position: fixed;
+    top: 20%;
+    right: 40%;
+    font-size: 6vh;
+    min-width: 50vw;
+  }
+
+  #do:after {
+    width: 20vw;
+  }
+
+  .rectangle {
+    text-align: left;
+  }
+
+  .rectangle h3 {
+    font-size: 5rem;
+  }
+
+  .rectangle p {
+    font-size: 2.5rem;
+  }
+
+  .right-line,
+  .line-bottom,
+  #bottomline {
+    border: none;
+  }
+
+  .rectangle p::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    margin-top: 3em;
+  }
+
+  .flex-holder {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .column h2 {
+    padding-left: 1em;
+    margin-bottom: -2%;
+    margin-top: -2%;
+    text-decoration: underline;
+  }
+
+  #dev-grid {
+    min-height: auto;
+  }
 }
 
-#hi:hover {
-  cursor: pointer;
-  color: white;
+@media only screen and (max-width: 600px) and (orientation: landscape) {
 }
 
-#bye {
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .background2 img {
+    min-height: 318vh;
+  }
+
+  .foreground-content2 {
+    display: flex;
+    flex-direction: column;
+    width: 170vw;
+  }
+
+  .foreground-content2 div {
+    width: 100%;
+  }
+
+  #do {
+    position: fixed;
+    top: 20%;
+    right: 40%;
+    font-size: 6vh;
+    min-width: 50vw;
+  }
+
+  #do:after {
+    width: 20vw;
+  }
+
+  .rectangle {
+    text-align: left;
+  }
+
+  .rectangle h3 {
+    font-size: 5rem;
+  }
+
+  .rectangle p {
+    font-size: 2.5rem;
+  }
+
+  .right-line,
+  .line-bottom,
+  #bottomline {
+    border: none;
+  }
+
+  .rectangle p::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    margin-top: 3em;
+  }
+
+  .flex-holder {
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .column h2 {
+    padding-left: 1em;
+    margin-bottom: -2%;
+    margin-top: -2%;
+    text-decoration: underline;
+  }
+
+  #dev-grid {
+    min-height: auto;
+  }
 }
 
-#nav {
-  position: fixed;
-  display: none;
-  left: 87%;
-  min-height: 50vh;
-  min-width: 50%;
-  z-index: 110;
-  color: white;
-  background-color: rgb(15, 15, 15);
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  #hi {
+    right: 0.35em;
+  }
+
+  .parallax-container2 {
+    min-height: fit-content;
+  }
+
+  .background2 img {
+    min-height: 322vh;
+  }
+
+  .foreground-content2 {
+    display: flex;
+    flex-direction: column;
+    width: 170vw;
+  }
+
+  .foreground-content2 div {
+    width: 100%;
+  }
+
+  #do {
+    position: fixed;
+    right: 40%;
+    font-size: 6vh;
+    min-width: 50vw;
+  }
+
+  #do:after {
+    width: 20vw;
+  }
+
+  .rectangle {
+    text-align: left;
+  }
+
+  .rectangle h3 {
+    font-size: 5rem;
+  }
+
+  .rectangle p {
+    font-size: 2.5rem;
+  }
+
+  .right-line,
+  .line-bottom,
+  #bottomline {
+    border: none;
+  }
+
+  .rectangle p::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: rgb(24, 24, 24);
+    width: 100%;
+    margin-top: 3em;
+  }
 }
 
-#nav-links {
-  margin-top: 8em;
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .foreground-content2 {
+    max-width: 2000px;
+    width: 200%;
+  }
+
+  .background2 img {
+    min-height: 150vh;
+  }
+
+  .foreground2 {
+    margin-top: 2em;
+    padding-top: 10em;
+  }
+
+  .rectangle h3 {
+    font-size: 5rem;
+  }
+
+  #do {
+    font-size: 5vw;
+    width: 50vw;
+  }
+
+  #do:after {
+    width: 20vw;
+  }
 }
 
-#nav p {
-  font-size: 1.3rem;
-  padding-left: 1.2em;
-  padding-bottom: 1em;
-}
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+  .foreground-content2 {
+    width: 200%;
+  }
 
-#nav p:hover {
-  font-size: 1.4rem;
-  letter-spacing: 0.1em;
-  filter: brightness(1.5);
-}
+  .background2 img {
+    min-height: 150vh;
+  }
 
-a,
-a:visited,
-a:active {
-  text-decoration: none;
-  color: rgb(189, 183, 183);
-}
+  .foreground2 {
+    margin-top: 2em;
+    padding-top: 10em;
+  }
 
-#nav h1 {
-  color: rgb(189, 183, 183);
-  cursor: pointer;
-  position: fixed;
-  right: 2%;
-  top: 2%;
-  font-size: 4vh;
-  font-weight: 800;
-}
-
-#nav h1:hover {
-  color: white;
+  .rectangle h3 {
+    font-size: 5rem;
+  }
 }
