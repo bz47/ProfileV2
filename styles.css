@@ -737,7 +737,15 @@ label {
   }
 
   #skills {
-    padding: 0;
+    padding: 2%;
+  }
+
+  #skills .holder {
+    padding-top: 5%;
+  }
+
+  .bar .title {
+    font-size: 4vh;
   }
 }
 
