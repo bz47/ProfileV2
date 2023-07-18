@@ -133,7 +133,7 @@ a:active {
 }
 
 section {
-  min-height: 90vh;
+  min-height: 80vh;
   padding: 5%;
 }
 /***************************************** SECTION 1 ****************************************/
@@ -636,6 +636,14 @@ label {
 /**************MEDIA QUERIES************/
 
 @media only screen and (max-width: 600px) and (orientation: portrait) {
+  .foreground {
+    transform: translateZ(-15px);
+  }
+
+  .foreground h1 {
+    font-size: 12vh;
+  }
+
   #me {
     display: none;
   }
@@ -664,7 +672,7 @@ label {
 
   #do {
     position: fixed;
-    top: 20%;
+    top: 15%;
     right: 40%;
     font-size: 6vh;
     min-width: 50vw;
