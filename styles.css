@@ -644,6 +644,14 @@ label {
     font-size: 12vh;
   }
 
+  #nav {
+    min-width: fit-content;
+  }
+
+  #nav-links {
+    margin-top: 2em;
+  }
+
   #me {
     display: none;
   }
